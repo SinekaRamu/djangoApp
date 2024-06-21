@@ -1,11 +1,13 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe App</title>
-    <link rel="stylesheet" href="static/style.css" />
-    <!-- <script src="script.js" defer></script> -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <script src="{% static 'js/script.js' %}" defer></script>
   </head>
   <body>
     <form id="recipe-form">
@@ -85,7 +87,7 @@
             <h3>Steps Todo :</h3>
             <p class="stepsTodo">steps that done</p>
           </div>
-          <!-- <button>delete</button> -->
+          <button>delete</button>
         </div>
       </div>
     </div>
