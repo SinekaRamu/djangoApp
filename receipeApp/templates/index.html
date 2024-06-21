@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <!-- <script src="script.js" defer></script> -->
+  </head>
+  <body>
+    <form id="recipe-form">
+      <div class="form-body">
+        <h1>Add Favrouite Recipe</h1>
+        <div class="form-element">
+          <label for="recipeName">Recipe Name : </label>
+          <input
+            id="recipeName"
+            type="text"
+            placeholder="Enter title of the recipe "
+            required
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="timeTaken">Preparation Time :</label>
+          <input
+            id="timeTaken"
+            type="time"
+            min="00:02"
+            max="03:00"
+            value="00:02"
+            name="hh%3Amm"
+            placeholder="Enter time consumed"
+            required
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="stepsTodo">Steps ToDo:</label>
+          <div>
+            <textarea
+              name="Steps"
+              id="stepsTodo"
+              rows="10"
+              cols="30"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-element">
+          <label for="recipeImg">Image of the recipe :</label>
+          <input
+            type="url"
+            placeholder="paste image url"
+            id="recipeImg"
+            required
+          />
+        </div>
+
+        <input type="submit" value="add-recipe" id="submitBtn" />
+      </div>
+    </form>
+    <div class="total-recipe">
+      <p>
+        Total Recipes :
+        <span id="count"></span>
+      </p>
+    </div>
+    <!-- recipe Card -->
+    <div id="display-card">
+      <div class="recipe-card">
+        <div class="imageBox">
+          <img src="image.png" alt="recipe pic" />
+        </div>
+        <div class="contentBox">
+          <div class="flex-box">
+            <h2>briyani</h2>
+            <div class="flex">
+              <h3>Time Taken :</h3>
+              <time>40 mins</time>
+            </div>
+          </div>
+          <div>
+            <h3>Steps Todo :</h3>
+            <p class="stepsTodo">steps that done</p>
+          </div>
+          <!-- <button>delete</button> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
